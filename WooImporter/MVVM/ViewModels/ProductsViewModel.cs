@@ -11,7 +11,7 @@ using WooImporter.MVVM.Models;
 
 namespace WooImporter.MVVM.ViewModels
 {
-    public class ProductsViewModel : INotifyPropertyChanged
+    public class ProductsViewModel : ObservableObject
     {
 
         private ObservableCollection<ProductModel> _products = new ObservableCollection<ProductModel>();
@@ -31,14 +31,6 @@ namespace WooImporter.MVVM.ViewModels
         {
             _products.Add(new ProductModel {Name = "Item 1", Price = "This should be a double"});
             _products.Add(new ProductModel {Name = "Item 2", Price = "This should be a double"});
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

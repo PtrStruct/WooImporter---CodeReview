@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="MVVM\Models\ProductModel.cs" />
     <Compile Include="MVVM\ViewModels\BaseViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\ObservableObject.cs" />
     <Compile Include="MVVM\ViewModels\ProductsViewModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
